@@ -1,0 +1,52 @@
+.app-shell {
+  min-height: 100vh;
+  position: relative;
+  padding: 1.25rem;
+}
+
+.app-shell-frame {
+  position: relative;
+  min-height: calc(100vh - 2.5rem);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(150deg, var(--surface-soft), var(--surface-raised));
+  box-shadow: var(--shadow-elevated);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.app-shell-glow {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(32px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.app-shell-glow--left {
+  width: 220px;
+  height: 220px;
+  background: color-mix(in srgb, var(--accent-work) 70%, transparent);
+  left: -32px;
+  top: -24px;
+}
+
+.app-shell-glow--right {
+  width: 260px;
+  height: 260px;
+  background: color-mix(in srgb, var(--accent-social) 65%, transparent);
+  right: -42px;
+  top: 16%;
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    padding: 0;
+  }
+
+  .app-shell-frame {
+    min-height: 100vh;
+    border-radius: 0;
+    border: 0;
+  }
+}

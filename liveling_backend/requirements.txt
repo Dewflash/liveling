@@ -1,0 +1,7 @@
+fastapi[all]
+sqlmodel
+alembic
+uvicorn
+httpx
+python-multipart
+pytest

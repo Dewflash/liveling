@@ -1,0 +1,241 @@
+.shop-page {
+  max-width: 980px;
+  padding: 1.45rem 1rem 2.6rem;
+  margin: 0 auto;
+  animation: page-fade 360ms ease-out;
+}
+
+.shop-header {
+  margin-bottom: 1rem;
+}
+
+.shop-kicker {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.shop-header h1 {
+  margin: 0.38rem 0 0;
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+}
+
+.shop-header p {
+  margin: 0.5rem 0 0;
+  color: var(--text-muted);
+  max-width: 62ch;
+}
+
+.shop-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 0.85rem;
+}
+
+.avatar-corner {
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--accent-highlight) 24%, #fff),
+    color-mix(in srgb, var(--accent-health) 10%, #fff)
+  );
+  box-shadow: var(--shadow-soft);
+  padding: 1.1rem;
+}
+
+.avatar-display {
+  text-align: center;
+}
+
+.avatar-emoji {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  animation: float 3.2s ease-in-out infinite;
+}
+
+.avatar-display p {
+  margin: 0;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--accent-health) 70%, #4f2d17);
+}
+
+.shop-offers {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.offer-card {
+  border: 1px solid var(--line-subtle);
+  background: color-mix(in srgb, var(--surface-raised) 92%, #fff);
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  text-align: left;
+  cursor: pointer;
+  display: grid;
+  gap: 0.25rem;
+  transition: transform 150ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.offer-card:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent-work) 42%, transparent);
+  box-shadow: var(--shadow-soft);
+}
+
+.offer-card.active {
+  border-color: color-mix(in srgb, var(--accent-work) 55%, transparent);
+  background: color-mix(in srgb, var(--accent-work) 11%, #fff);
+}
+
+.offer-card:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.offer-icon {
+  font-size: 1.18rem;
+}
+
+.offer-title {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.offer-rate {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.purchase-section {
+  grid-column: 2;
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--surface-raised) 90%, #fff);
+  box-shadow: var(--shadow-soft);
+  padding: 1rem;
+}
+
+.purchase-section h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+}
+
+.shop-form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.form-group label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-subtle);
+  background: #fff;
+  color: var(--text-primary);
+  font: inherit;
+  padding: 0.72rem 0.8rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent-work) 32%, transparent);
+  outline-offset: 2px;
+}
+
+.shop-hint {
+  margin: 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid color-mix(in srgb, var(--accent-highlight) 36%, transparent);
+  background: color-mix(in srgb, var(--accent-highlight) 10%, #fff);
+  padding: 0.58rem 0.7rem;
+  color: var(--text-primary);
+}
+
+.purchase-btn {
+  height: 2.8rem;
+  border: 0;
+  border-radius: var(--radius-md);
+  color: #fff;
+  background: linear-gradient(120deg, var(--accent-work), #2b7cc7);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 150ms ease, filter 180ms ease;
+}
+
+.purchase-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.purchase-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.empty-state {
+  grid-column: 2;
+  text-align: center;
+  border: 1px dashed var(--line-subtle);
+  border-radius: var(--radius-lg);
+  color: var(--text-muted);
+  padding: 2rem 1rem;
+}
+
+@keyframes page-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 900px) {
+  .shop-container {
+    grid-template-columns: 1fr;
+  }
+
+  .avatar-corner,
+  .shop-offers,
+  .purchase-section,
+  .empty-state {
+    grid-column: auto;
+  }
+
+  .shop-offers {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,120 @@
+:root {
+  --color-parchment: #f3e2c8;
+  --color-parchment-dark: #dfc29a;
+  --color-forest: #2f5a34;
+  --color-forest-mid: #3f7044;
+  --color-forest-light: #5a9960;
+  --color-gold: #d6ab48;
+  --color-gold-light: #f0ce77;
+  --color-ember: #c46a2f;
+  --color-ember-dark: #8d4519;
+  --color-vitality: #e85a5a;
+  --color-essence: #2f8b78;
+  --color-credits: #3a78bf;
+  --color-custom: #bf8542;
+
+  --font-heading: "Cinzel", Georgia, serif;
+  --font-body: "Lora", Georgia, serif;
+  --font-stat: "JetBrains Mono", "Courier New", monospace;
+  --font-ui: "Lora", Georgia, serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-parchment: 0 6px 16px rgba(82, 47, 17, 0.14), inset 0 1px 2px rgba(255, 255, 255, 0.58);
+  --shadow-gold: 0 0 14px rgba(214, 171, 72, 0.36);
+  --shadow-soft: 0 10px 22px rgba(73, 43, 18, 0.14);
+
+  --app-bg: var(--color-parchment);
+  --bg-base: var(--color-parchment);
+  --bg-gradient: radial-gradient(circle at 10% 9%, rgba(243, 181, 98, 0.45) 0%, transparent 38%),
+    radial-gradient(circle at 88% 12%, rgba(139, 92, 36, 0.26) 0%, transparent 34%),
+    radial-gradient(circle at 42% 90%, rgba(114, 148, 83, 0.22) 0%, transparent 36%),
+    linear-gradient(180deg, #f5e7cf 0%, #ead5b8 100%);
+  --surface-soft: rgba(255, 252, 248, 0.76);
+  --surface-raised: rgba(255, 250, 242, 0.94);
+  --surface-contrast: #1f2b37;
+  --panel-bg: #f8ebd6;
+  --line-subtle: rgba(82, 55, 28, 0.2);
+  --panel-border: rgba(120, 82, 39, 0.28);
+  --text-primary: #2a180a;
+  --text-secondary: #5a391e;
+  --text-muted: #795631;
+  --accent-health: #b85b2b;
+  --accent-social: #2e7e64;
+  --accent-work: #2f5f9c;
+  --accent-highlight: #f2b63d;
+  --danger: #bf3f55;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-parchment: #0d1b2a;
+    --color-parchment-dark: #0a1520;
+    --color-forest: #1a3a2a;
+    --color-forest-mid: #1f4a32;
+    --color-forest-light: #2d6b45;
+    --color-gold: #c9a84c;
+    --color-gold-light: #e8c96a;
+
+    --app-bg: #0d1b2a;
+    --bg-base: #0d1b2a;
+    --bg-gradient: radial-gradient(circle at 14% 10%, rgba(247, 220, 168, 0.07) 0%, transparent 34%),
+      radial-gradient(circle at 85% 24%, rgba(182, 223, 241, 0.07) 0%, transparent 33%),
+      radial-gradient(circle at 48% 84%, rgba(190, 229, 197, 0.06) 0%, transparent 39%);
+    --surface-raised: rgba(17, 31, 46, 0.92);
+    --surface-soft: rgba(17, 31, 46, 0.75);
+    --surface-contrast: #e8dcc8;
+    --panel-bg: #111f2e;
+    --line-subtle: rgba(100, 140, 100, 0.2);
+    --panel-border: rgba(100, 140, 100, 0.2);
+    --text-primary: #e8dcc8;
+    --text-secondary: #a89070;
+    --text-muted: #7a6550;
+  }
+}
+
+body {
+  background: var(--app-bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: background 1.5s ease;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+.heading {
+  font-family: var(--font-heading);
+}
+
+.stat,
+.number,
+.currency {
+  font-family: var(--font-stat);
+}
+
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-parchment);
+}
+
+body.time-morning {
+  --app-bg: #f8e2c3;
+}
+
+body.time-afternoon {
+  --app-bg: #f0d7b4;
+}
+
+body.time-evening {
+  --app-bg: #ddb489;
+}
+
+body.time-night {
+  --app-bg: #0d1b2a;
+}

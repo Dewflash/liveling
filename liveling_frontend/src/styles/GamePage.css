@@ -1,0 +1,256 @@
+.game-page {
+  max-width: 1100px;
+  padding: 2rem 1rem;
+  animation: page-fade 0.4s ease-out;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.game-header h1 {
+  font-size: 2.15rem;
+  margin: 0 0 0.5rem;
+  background: linear-gradient(135deg, #ff6b6b, #ffa94d, #74c0fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.game-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+/* Game Container */
+.game-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  animation: slide-up 0.5s ease-out;
+  align-items: start;
+}
+
+.game-arena {
+  background: linear-gradient(135deg, #101a2b 0%, #13203a 50%, #0f3460 100%);
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0.25rem;
+  min-height: 440px;
+}
+
+.rpg-canvas {
+  width: 100%;
+  height: 440px;
+  display: block;
+  border-radius: 10px;
+}
+
+.rpg-sidebar {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 440px;
+}
+
+.stat-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.5rem;
+}
+
+.stat-row span {
+  color: #475569;
+}
+
+.stat-row strong {
+  color: #0f172a;
+  font-size: 1.05rem;
+}
+
+.rpg-quest-box {
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #eef2ff, #e0f2fe);
+  border: 1px solid #bfdbfe;
+}
+
+.rpg-quest-box h3 {
+  margin: 0;
+  color: #1e3a8a;
+  font-size: 0.95rem;
+}
+
+.rpg-quest-box p {
+  margin: 0.45rem 0 0;
+  color: #1f2937;
+  font-size: 0.9rem;
+}
+
+.auto-combat-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.teleport-map {
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 0.6rem;
+  background: #f0f9ff;
+}
+
+.teleport-map h3,
+.inventory-block h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #1e3a8a;
+}
+
+.teleport-list {
+  margin-top: 0.5rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.teleport-btn {
+  border: 1px solid #93c5fd;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  cursor: pointer;
+  color: #0f172a;
+}
+
+.inventory-block {
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius-lg);
+  padding: 0.6rem;
+  background: var(--panel-bg);
+  box-shadow: var(--shadow-parchment), var(--shadow-gold);
+}
+
+.inventory-item {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: center;
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  padding: 0.45rem;
+  background: #fff;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.inventory-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.inventory-item strong {
+  font-size: 0.86rem;
+  color: #1f2937;
+}
+
+.inventory-item p {
+  margin: 0.2rem 0 0;
+  font-size: 0.78rem;
+  color: #475569;
+}
+
+.equip-btn {
+  border: 1px solid #cbd5e1;
+  background: #eff6ff;
+  border-radius: 8px;
+  padding: 0.35rem 0.55rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.equip-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.rarity-common {
+  border-color: #9a9a9a;
+}
+
+.rarity-uncommon {
+  border-color: #3a9a3a;
+}
+
+.rarity-rare {
+  border-color: #3a5aaa;
+}
+
+.rarity-epic {
+  border-color: #8a2aaa;
+}
+
+.rarity-legendary {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.4);
+}
+
+.game-hint {
+  grid-column: 1 / -1;
+  text-align: left;
+  color: #334155;
+  background: #ecfeff;
+  border: 1px solid #bae6fd;
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+@keyframes page-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .game-container {
+    grid-template-columns: 1fr;
+  }
+
+  .game-hint {
+    grid-column: auto;
+  }
+
+  .rpg-canvas,
+  .game-arena,
+  .rpg-sidebar {
+    min-height: 360px;
+    height: 360px;
+  }
+}

@@ -1,0 +1,111 @@
+/* News Feed Component */
+.news-feed {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: slide-up 0.5s ease-out;
+}
+
+.news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.news-header h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.1rem;
+}
+
+.quick-add-btn {
+  background: #2d5016;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-add-btn:hover {
+  background: #1e3a0f;
+  transform: scale(1.1);
+}
+
+.news-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.news-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background 0.2s ease;
+}
+
+.news-item:hover {
+  background: #f9fafb;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.news-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.news-username {
+  font-weight: 700;
+  color: #2d5016;
+  font-size: 0.95rem;
+}
+
+.news-message {
+  margin: 0;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.news-time {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.empty-feed {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #9ca3af;
+  margin: 0;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

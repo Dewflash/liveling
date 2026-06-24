@@ -1,0 +1,143 @@
+/* Mission Priorities Component */
+.mission-priorities {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: slide-up 0.5s ease-out;
+}
+
+.priorities-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.priorities-header h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.1rem;
+}
+
+.priorities-list {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.priority-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+  transition: all 0.2s ease;
+}
+
+.priority-item:hover {
+  background: #f9fafb;
+}
+
+.priority-item:last-child {
+  border-bottom: none;
+}
+
+.priority-number {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #a4d65e, #68b54a);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.priority-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.priority-info h4 {
+  margin: 0 0 0.5rem;
+  color: #1f2937;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.priority-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.currency-reward {
+  font-size: 1.25rem;
+}
+
+.xp-reward,
+.difficulty {
+  color: #6b7280;
+}
+
+.priority-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.action-btn.complete {
+  color: #2d5016;
+}
+
+.action-btn.complete:hover {
+  background: #f0fdf4;
+  border-color: #2d5016;
+}
+
+.action-btn.edit {
+  color: #3b82f6;
+}
+
+.action-btn.edit:hover {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.empty-priorities {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #9ca3af;
+  margin: 0;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

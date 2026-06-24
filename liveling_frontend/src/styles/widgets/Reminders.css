@@ -1,0 +1,129 @@
+/* Reminders Component */
+.reminders-section {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  animation: slide-up 0.5s ease-out;
+}
+
+.reminders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.reminders-header h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.1rem;
+}
+
+.reminders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.reminder-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.reminder-item.active:hover {
+  background: white;
+  border-color: #d1d5db;
+}
+
+.reminder-item.completed {
+  background: #f0fdf4;
+  opacity: 0.7;
+}
+
+.reminder-priority {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.reminder-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.reminder-title {
+  margin: 0;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.reminder-date {
+  display: block;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.reminder-check {
+  flex-shrink: 0;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: #d1d5db;
+}
+
+.reminder-check:hover {
+  border-color: #2d5016;
+  color: #2d5016;
+}
+
+.completed-icon {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  color: #10b981;
+}
+
+.completed-reminders {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.completed-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+
+.empty-reminders {
+  text-align: center;
+  color: #9ca3af;
+  margin: 2rem 0;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
