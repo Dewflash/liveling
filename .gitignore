@@ -21,6 +21,7 @@ liveling_backend/uploads/
 
 # Docs kept private (not pushed)
 *.md
+!/README.md
 
 # Raw / copyrighted art assets (kept private)
 Forest Trees/
